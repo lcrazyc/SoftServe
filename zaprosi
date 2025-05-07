@@ -1,0 +1,101 @@
+-- пример вставки фильма
+INSERT INTO movies (id, title, description, genres, rating, release_year, poster_url, trailer_url, duration_minutes)
+VALUES (
+  1,
+  'Люблю тебе ненавидіти',
+  'Після незабутнього першого побачення успішний фінансовий аналітик Бен і молода студентка юридичного факультету Бі здаються ідеальною парою...',
+  'Романтична кінокомедія',
+  4.5,
+  2023,
+  'Films photo/Photo1.png',
+  'https://www.youtube.com/watch?v=j3NG4NI93qA',
+  120
+);
+
+-- Авторизация №_№
+SELECT id, username, role 
+FROM users 
+WHERE username = '123' AND password_hash = '123451';
+
+-- новый юзер
+INSERT INTO users (username, password_hash, email, role)
+VALUES ('new_user', '$2a$10$hashed_password', 'user@example.com', 'user');
+
+-- добавить сеанс :_:
+INSERT INTO sessions (movie_id, hall_id, session_time, price)
+VALUES (4, 1, '2024-06-15 18:00:00', 250.00);
+
+-- сеансы скоро
+SELECT m.title, m.poster_url, s.session_time, s.price 
+FROM sessions s
+JOIN movies m ON s.movie_id = m.id
+WHERE s.session_time > NOW()
+ORDER BY s.session_time;
+
+-- получить билетик 
+INSERT INTO tickets (session_id, user_id, seat_number, status)
+VALUES (3, 1, 'A12', 'reserved');
+
+--купить билетик 
+UPDATE tickets 
+SET status = 'purchased', purchased_at = NOW() 
+WHERE id = 1;
+
+INSERT INTO payments (ticket_id, amount, payment_method)
+VALUES (1, 250.00, 'card');
+
+--юзер и билетик
+SELECT m.title, s.session_time, t.seat_number, p.amount
+FROM tickets t
+JOIN sessions s ON t.session_id = s.id
+JOIN movies m ON s.movie_id = m.id
+LEFT JOIN payments p ON p.ticket_id = t.id
+WHERE t.user_id = 1;
+
+--добавить в любимые
+INSERT INTO favorites (user_id, movie_id)
+VALUES (1, 4);
+
+--пример отзыва
+INSERT INTO reviews (user_id, movie_id, rating, comment)
+VALUES (1, 6, 5, 'Надзвичайно потужний фільм з чудовою грою акторів');
+
+-- получить отзывы
+SELECT u.username, r.rating, r.comment, r.created_at
+FROM reviews r
+JOIN users u ON r.user_id = u.id
+WHERE r.movie_id = 6
+ORDER BY r.created_at DESC;
+
+--АКЦИИИИИИ
+INSERT INTO promotions (title, description, code_url, start_date, end_date)
+VALUES (
+  'Літня розпродаж',
+  'Знижка 20% на всі сеанси у червні',
+  'promo_codes/summer20.png',
+  '2024-06-01',
+  '2024-06-30'
+);
+
+--получить фидбек
+INSERT INTO feedback (name, email, message)
+VALUES ('Іван Петренко', 'ivan@example.com', 'Чудовий сервіс, але не вистачає більше сеансів вранці');
+
+--отчет о продажам за день
+SELECT DATE(payment_time) as day, 
+       COUNT(*) as tickets_sold, 
+       SUM(amount) as total_revenue
+FROM payments
+WHERE payment_time BETWEEN '2024-06-01' AND '2024-06-30'
+GROUP BY DATE(payment_time)
+ORDER BY day;
+
+--самые популярные фильмы *_*
+SELECT m.title, COUNT(t.id) as tickets_sold
+FROM tickets t
+JOIN sessions s ON t.session_id = s.id
+JOIN movies m ON s.movie_id = m.id
+WHERE t.status = 'purchased'
+GROUP BY m.title
+ORDER BY tickets_sold DESC
+LIMIT 5;
