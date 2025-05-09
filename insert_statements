@@ -1,0 +1,265 @@
+-- MySQL dump 10.13  Distrib 8.0.41, for Win64 (x86_64)
+--
+-- Host: 127.0.0.1    Database: chevapchihi
+-- ------------------------------------------------------
+-- Server version	8.0.41
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `favorites`
+--
+
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `favorites` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `user_id` int NOT NULL,
+  `movie_id` int NOT NULL,
+  `created_at` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`),
+  KEY `movie_id` (`movie_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `favorites`
+--
+
+INSERT INTO `favorites` VALUES (1,2,1,'2025-05-09 20:31:22'),(2,2,4,'2025-05-09 20:31:22'),(3,2,7,'2025-05-09 20:31:22'),(4,3,3,'2025-05-09 20:31:22'),(5,3,5,'2025-05-09 20:31:22'),(6,3,8,'2025-05-09 20:31:22'),(7,4,1,'2025-05-09 20:31:22'),(8,4,4,'2025-05-09 20:31:22'),(9,4,7,'2025-05-09 20:31:22'),(10,5,3,'2025-05-09 20:31:22'),(11,5,5,'2025-05-09 20:31:22'),(12,6,2,'2025-05-09 20:31:22'),(13,6,4,'2025-05-09 20:31:22'),(14,6,6,'2025-05-09 20:31:22'),(15,6,8,'2025-05-09 20:31:22');
+
+--
+-- Table structure for table `feedback`
+--
+
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `feedback` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `message` text,
+  `submitted_at` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `feedback`
+--
+
+INSERT INTO `feedback` VALUES (1,'Mark Johnson','mark@example.com','Great website! Would love to see more indie films.','2025-05-09 20:31:22'),(2,'Sarah Williams','sarah@example.com','The online booking system is very user-friendly.','2025-05-09 20:31:22'),(3,'Robert Chen','robert.c@example.com','Is it possible to add a feature to save favorite seats for future bookings?','2025-05-09 20:31:22'),(4,'Laura Martinez','laura.m@example.com','I enjoyed the new IMAX hall. The sound quality is amazing!','2025-05-09 20:31:22'),(5,'Alex Thompson','alex.t@example.com','Could you please consider adding more foreign language films to your program?','2025-05-09 20:31:22'),(6,'Emma Davis','emma.d@example.com','The mobile app sometimes crashes when I try to book multiple tickets at once.','2025-05-09 20:31:22'),(7,'Jason Kim','jason.k@example.com','Great selection of films! Would be nice to have more late-night screenings on weekends.','2025-05-09 20:31:22'),(8,'Olivia Brown','olivia.b@example.com','I had an issue with my payment but the staff at the theater were very helpful in resolving it.','2025-05-09 20:31:22'),(9,'Daniel White','daniel.w@example.com','The VIP hall experience was worth every penny! Will definitely book again.','2025-05-09 20:31:22');
+
+--
+-- Table structure for table `halls`
+--
+
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `halls` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  `capacity` int NOT NULL,
+  `features` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `halls`
+--
+
+INSERT INTO `halls` VALUES (1,'Hall A',150,'Standard,Wheelchair Access'),(2,'Hall B',120,'Standard,Dolby Sound'),(3,'IMAX Hall',200,'IMAX,3D,Premium Sound'),(4,'VIP Hall',50,'Premium Seating,Food Service,Dolby Atmos'),(5,'4DX Hall',80,'4D Effects,Motion Seats,Premium Sound');
+
+--
+-- Table structure for table `movies`
+--
+
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `movies` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  `description` text,
+  `genres` varchar(255) DEFAULT NULL,
+  `rating` decimal(2,1) DEFAULT NULL,
+  `release_year` int DEFAULT NULL,
+  `poster_url` varchar(255) DEFAULT NULL,
+  `trailer_url` varchar(255) DEFAULT NULL,
+  `duration_minutes` int DEFAULT NULL,
+  `created_at` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `movies`
+--
+
+INSERT INTO `movies` VALUES (1,'The Last Adventure','An epic journey through unexplored territories where heroes face their greatest fears.','Adventure,Fantasy',8.5,2024,'https://example.com/posters/last_adventure.jpg','https://example.com/trailers/last_adventure.mp4',135,'2025-05-09 20:31:22'),(2,'Midnight Mystery','A detective must solve a complex case before time runs out in this thrilling noir film.','Thriller,Mystery',7.8,2023,'https://example.com/posters/midnight_mystery.jpg','https://example.com/trailers/midnight_mystery.mp4',118,'2025-05-09 20:31:22'),(3,'Love in Paris','A romantic comedy about finding love in the most unexpected places.','Romance,Comedy',7.2,2024,'https://example.com/posters/love_paris.jpg','https://example.com/trailers/love_paris.mp4',105,'2025-05-09 20:31:22'),(4,'Cosmic Legends','In the distant future, humanity faces its greatest threat from beyond the stars.','Sci-Fi,Action',8.9,2024,'https://example.com/posters/cosmic_legends.jpg','https://example.com/trailers/cosmic_legends.mp4',142,'2025-05-09 20:31:22'),(5,'The Silent Witness','A gripping courtroom drama with unexpected twists that will keep you guessing.','Drama,Thriller',8.1,2024,'https://example.com/posters/silent_witness.jpg','https://example.com/trailers/silent_witness.mp4',126,'2025-05-09 20:31:22'),(6,'Family Reunion','A heartwarming comedy about a dysfunctional family coming together for the holidays.','Comedy,Family',7.4,2023,'https://example.com/posters/family_reunion.jpg','https://example.com/trailers/family_reunion.mp4',112,'2025-05-09 20:31:22'),(7,'Haunted Hills','Five friends discover an abandoned mansion with a terrifying secret.','Horror,Thriller',7.6,2024,'https://example.com/posters/haunted_hills.jpg','https://example.com/trailers/haunted_hills.mp4',98,'2025-05-09 20:31:22'),(8,'Champion\'s Race','Based on the true story of an underdog athlete who defied all odds.','Sports,Drama,Biography',8.3,2023,'https://example.com/posters/champions_race.jpg','https://example.com/trailers/champions_race.mp4',131,'2025-05-09 20:31:22');
+
+--
+-- Table structure for table `payments`
+--
+
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `payments` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `ticket_id` int NOT NULL,
+  `amount` decimal(8,2) NOT NULL,
+  `payment_time` datetime DEFAULT CURRENT_TIMESTAMP,
+  `payment_method` enum('card','paypal','cash') DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `ticket_id` (`ticket_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `payments`
+--
+
+INSERT INTO `payments` VALUES (1,1,12.50,'2025-05-09 20:31:22','card'),(2,2,12.50,'2025-05-09 20:31:22','paypal'),(3,3,12.50,'2025-05-09 20:31:22','paypal'),(4,4,12.50,'2025-05-09 20:31:22','card'),(5,5,12.50,'2025-05-09 20:31:22','card'),(6,6,12.50,'2025-05-09 20:31:22','cash'),(7,8,12.50,'2025-05-09 20:31:22','card'),(8,9,12.50,'2025-05-09 20:31:22','card'),(9,10,18.00,'2025-05-09 20:31:22','card'),(10,11,18.00,'2025-05-09 20:31:22','card'),(11,12,18.00,'2025-05-09 20:31:22','paypal'),(12,13,18.00,'2025-05-09 20:31:22','paypal'),(13,14,10.00,'2025-05-09 20:31:22','card'),(14,15,10.00,'2025-05-09 20:31:22','cash'),(15,16,15.00,'2025-05-09 20:31:22','paypal'),(16,17,15.00,'2025-05-09 20:31:22','paypal'),(17,18,18.00,'2025-05-09 20:31:22','card'),(18,19,18.00,'2025-05-09 20:31:22','card'),(19,20,18.00,'2025-05-09 20:31:22','card'),(20,21,18.00,'2025-05-09 20:31:22','cash'),(21,22,10.00,'2025-05-09 20:31:22','paypal'),(22,24,20.00,'2025-05-09 20:31:22','card'),(23,25,10.00,'2025-05-09 20:31:22','paypal'),(24,26,15.00,'2025-05-09 20:31:22','card'),(25,27,15.00,'2025-05-09 20:31:22','card');
+
+--
+-- Table structure for table `promotions`
+--
+
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `promotions` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) DEFAULT NULL,
+  `description` text,
+  `code_url` varchar(255) DEFAULT NULL,
+  `start_date` date DEFAULT NULL,
+  `end_date` date DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `promotions`
+--
+
+INSERT INTO `promotions` VALUES (1,'Summer Discount','Get 20% off on all movies this summer!','SUMMER2025','2025-06-01','2025-08-31'),(2,'Student Tuesdays','Students get 30% off every Tuesday with valid ID','STUDENT30','2025-05-01','2025-12-31'),(3,'Family Package','Buy 4 tickets and get 15% off the total price','FAMILY15','2025-05-01','2025-07-31'),(4,'Morning Special','25% off all screenings before 12:00 PM','MORNING25','2025-05-15','2025-06-15'),(5,'Premium IMAX Experience','Free popcorn with any IMAX ticket purchase','IMAXPOP','2025-05-10','2025-05-20'),(6,'Loyalty Program','Buy 10 tickets and get 1 free',NULL,'2025-01-01','2025-12-31'),(7,'Birthday Special','Free ticket on your birthday (ID required)',NULL,'2025-01-01','2025-12-31');
+
+--
+-- Table structure for table `reviews`
+--
+
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `reviews` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `user_id` int NOT NULL,
+  `movie_id` int NOT NULL,
+  `rating` int DEFAULT NULL,
+  `comment` text,
+  `created_at` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`),
+  KEY `movie_id` (`movie_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `reviews`
+--
+
+INSERT INTO `reviews` VALUES (1,2,1,9,'Amazing special effects and a compelling storyline!','2025-05-09 20:31:22'),(2,3,1,8,'Really enjoyed the character development in this movie.','2025-05-09 20:31:22'),(3,4,1,9,'Best adventure film I\'ve seen in years. The visuals were breathtaking.','2025-05-09 20:31:22'),(4,5,1,7,'Good movie overall, but some scenes dragged on too long.','2025-05-09 20:31:22'),(5,2,2,7,'Good plot twists but the ending was predictable.','2025-05-09 20:31:22'),(6,6,2,8,'Edge of my seat the whole time! Brilliant performances.','2025-05-09 20:31:22'),(7,4,2,6,'Interesting premise but the execution fell a bit flat for me.','2025-05-09 20:31:22'),(8,3,3,8,'So charming and funny! Loved the chemistry between the leads.','2025-05-09 20:31:22'),(9,5,3,7,'Cute romantic comedy with beautiful scenery of Paris.','2025-05-09 20:31:22'),(10,2,4,10,'Mindblowing special effects and a truly original story!','2025-05-09 20:31:22'),(11,4,4,9,'The best sci-fi film of the decade. Can\'t wait for the sequel!','2025-05-09 20:31:22'),(12,6,4,8,'Great world-building and fascinating alien designs.','2025-05-09 20:31:22'),(13,3,4,7,'Visually spectacular but the plot had some holes.','2025-05-09 20:31:22'),(14,5,5,9,'Brilliant courtroom drama with an unexpected twist!','2025-05-09 20:31:22'),(15,3,5,8,'The performances were exceptional, especially from the lead actress.','2025-05-09 20:31:22'),(16,2,6,6,'Had some good laughs but pretty standard family comedy fare.','2025-05-09 20:31:22'),(17,6,6,8,'Heartwarming and hilarious! Reminded me of my own family gatherings.','2025-05-09 20:31:22'),(18,4,7,9,'Actually scary! Don\'t watch this alone at night.','2025-05-09 20:31:22'),(19,5,7,7,'Good atmosphere but relied too much on jump scares.','2025-05-09 20:31:22'),(20,3,8,9,'Inspirational story that had me tearing up at the end.','2025-05-09 20:31:22'),(21,6,8,8,'Great sports drama with excellent race sequences.','2025-05-09 20:31:22');
+
+--
+-- Table structure for table `sessions`
+--
+
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `sessions` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `movie_id` int NOT NULL,
+  `hall_id` int NOT NULL,
+  `session_time` datetime NOT NULL,
+  `price` decimal(8,2) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `movie_id` (`movie_id`),
+  KEY `hall_id` (`hall_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `sessions`
+--
+
+INSERT INTO `sessions` VALUES (1,1,1,'2025-05-10 18:00:00',12.50),(2,1,2,'2025-05-10 20:30:00',12.50),(3,1,3,'2025-05-12 19:00:00',18.00),(4,1,1,'2025-05-15 17:30:00',12.50),(5,2,1,'2025-05-10 15:30:00',10.00),(6,2,2,'2025-05-11 21:00:00',10.00),(7,2,4,'2025-05-14 20:00:00',22.50),(8,3,3,'2025-05-11 19:00:00',15.00),(9,3,1,'2025-05-13 16:30:00',10.00),(10,3,4,'2025-05-16 18:00:00',22.50),(11,4,3,'2025-05-10 14:00:00',18.00),(12,4,3,'2025-05-10 17:30:00',18.00),(13,4,3,'2025-05-12 20:00:00',18.00),(14,4,5,'2025-05-15 19:30:00',20.00),(15,5,2,'2025-05-11 15:00:00',10.00),(16,5,4,'2025-05-13 19:30:00',22.50),(17,6,1,'2025-05-12 14:00:00',10.00),(18,6,2,'2025-05-14 16:30:00',10.00),(19,7,5,'2025-05-10 22:00:00',20.00),(20,7,2,'2025-05-13 21:30:00',10.00),(21,8,1,'2025-05-11 13:00:00',10.00),(22,8,3,'2025-05-14 18:00:00',15.00);
+
+--
+-- Table structure for table `tickets`
+--
+
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `tickets` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `session_id` int NOT NULL,
+  `user_id` int NOT NULL,
+  `seat_number` varchar(10) DEFAULT NULL,
+  `status` enum('reserved','purchased') DEFAULT 'reserved',
+  `purchased_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `session_id` (`session_id`),
+  KEY `user_id` (`user_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=30 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tickets`
+--
+
+INSERT INTO `tickets` VALUES (1,1,2,'A12','purchased','2025-05-04 10:15:00'),(2,1,3,'A13','purchased','2025-05-04 10:15:00'),(3,1,3,'A14','purchased','2025-05-04 10:15:00'),(4,1,4,'B5','purchased','2025-05-04 12:30:00'),(5,1,4,'B6','purchased','2025-05-04 12:30:00'),(6,1,5,'C8','purchased','2025-05-04 15:45:00'),(7,1,6,'D10','reserved',NULL),(8,2,2,'B7','reserved',NULL),(9,2,5,'C3','purchased','2025-05-05 09:20:00'),(10,2,5,'C4','purchased','2025-05-05 09:20:00'),(11,3,4,'E15','purchased','2025-05-06 16:10:00'),(12,3,4,'E16','purchased','2025-05-06 16:10:00'),(13,3,6,'F8','purchased','2025-05-07 11:30:00'),(14,3,6,'F9','purchased','2025-05-07 11:30:00'),(15,5,3,'D7','purchased','2025-05-05 14:25:00'),(16,5,2,'D8','purchased','2025-05-05 18:40:00'),(17,8,3,'A5','purchased','2025-05-06 10:15:00'),(18,8,3,'A6','purchased','2025-05-06 10:15:00'),(19,11,2,'F12','purchased','2025-05-07 20:05:00'),(20,11,2,'F13','purchased','2025-05-07 20:05:00'),(21,11,4,'G8','purchased','2025-05-08 13:45:00'),(22,11,5,'H10','purchased','2025-05-08 17:20:00'),(23,11,6,'I15','reserved',NULL),(24,15,5,'C9','purchased','2025-05-07 09:30:00'),(25,15,3,'D11','reserved',NULL),(26,19,4,'B3','purchased','2025-05-06 21:40:00'),(27,20,3,'E7','purchased','2025-05-07 14:15:00'),(28,22,6,'A1','purchased','2025-05-08 10:30:00'),(29,22,6,'A2','purchased','2025-05-08 10:30:00');
+
+--
+-- Table structure for table `users`
+--
+
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `users` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `username` varchar(50) NOT NULL,
+  `password_hash` varchar(255) NOT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `role` enum('user','admin') DEFAULT 'user',
+  `created_at` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `username` (`username`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` VALUES (1,'123','123451','123','admin','2025-05-04 00:15:43'),(2,'john_doe','$2y$10$8FPiDzwjk9MTwZJlw5vBJ.MvuKXNVDpOGlUPt2aBIjXCQDFXQSjNO','john.doe@example.com','user','2025-05-09 20:31:22'),(3,'jane_smith','$2y$10$Kp.4lRF8jQYxB0QgUKXvuO/XMgwZNO.DAKORMwCl5RIwdieZ8oXFy','jane.smith@example.com','user','2025-05-09 20:31:22'),(4,'michael_brown','$2y$10$LmN5rThJd2SaPzKH9TGcTuqGjHDDrKTR6Lcl1FxKP5g2MWJlL8uje','michael.brown@example.com','user','2025-05-09 20:31:22'),(5,'emily_jones','$2y$10$XsPqRb2vDJfLK4J6vPSXzexE9ZD7tK.2Jp/fmCpLN7TT4CGUL3Xia','emily.jones@example.com','user','2025-05-09 20:31:22'),(6,'david_wilson','$2y$10$9pDKL5jHrPLwF2sVXH.R5ekP.jzG6Kh.q5TcIHXHNzNpDQwKcGZ/W','david.wilson@example.com','user','2025-05-09 20:31:22'),(7,'admin_user','$2y$10$g5uCo3wA8C5OjUdCTb0VIeQG7HvTXkS8GsI0wvyIcB2.7PO9gYSk6','admin@cinemasite.com','admin','2025-05-09 20:31:22'),(8,'super_admin','$2y$10$tK2vH7Lj9R3eFPQjZoUPF.K2qrKeO4Vh3WI6ElU3TrFiMfLRlnm2K','super.admin@cinemasite.com','admin','2025-05-09 20:31:22');
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2025-05-09 23:46:38
