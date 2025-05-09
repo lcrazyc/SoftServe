@@ -1,0 +1,40 @@
+.section {
+  padding: 30px;
+}
+
+.films-row-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px; 
+  margin-top: 10px;
+}
+
+.films-row-wrapper {
+  width: 1160px; 
+  overflow: hidden;
+}
+
+.films-row {
+  display: flex;
+  gap: 40px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.films-row::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.scroll-button img {
+  width: 24px;
+  height: 24px;
+  filter: invert(1);
+}
