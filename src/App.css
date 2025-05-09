@@ -58,9 +58,9 @@ button:hover{
 a{
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 600;
+  font-weight: 700;
   font-style: normal;
-  font-size: 14px;
+  font-size: 20px;
   color: var(--white-color);
 }
 input{
