@@ -1,0 +1,449 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\back\\WebApplication2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|d:\\back\\webapplication2\\webapplication2\\controllers\\reviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|solutionrelative:webapplication2\\controllers\\reviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|d:\\back\\webapplication2\\webapplication2\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|solutionrelative:webapplication2\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|d:\\back\\webapplication2\\webapplication2\\models\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|solutionrelative:webapplication2\\models\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|d:\\back\\webapplication2\\webapplication2\\models\\session.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|solutionrelative:webapplication2\\models\\session.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|d:\\back\\webapplication2\\webapplication2\\models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|solutionrelative:webapplication2\\models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|d:\\back\\webapplication2\\webapplication2\\models\\promotion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|solutionrelative:webapplication2\\models\\promotion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|d:\\back\\webapplication2\\webapplication2\\models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|solutionrelative:webapplication2\\models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|d:\\back\\webapplication2\\webapplication2\\models\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|solutionrelative:webapplication2\\models\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|d:\\back\\webapplication2\\webapplication2\\models\\feedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|solutionrelative:webapplication2\\models\\feedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|d:\\back\\webapplication2\\webapplication2\\data\\mydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|solutionrelative:webapplication2\\data\\mydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|d:\\back\\webapplication2\\webapplication2\\controllers\\favoritecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|solutionrelative:webapplication2\\controllers\\favoritecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|d:\\back\\webapplication2\\webapplication2\\models\\favorite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|solutionrelative:webapplication2\\models\\favorite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|d:\\back\\webapplication2\\webapplication2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|solutionrelative:webapplication2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\u042E\u0440\u0456\u0439\u0412\u0430\u0441\u0438\u043B\u044C\u0454\u0432\\AppData\\Roaming\\Microsoft\\UserSecrets\\d5fd94ca-85b3-4dbd-88c6-73c34013f354\\secrets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|d:\\back\\webapplication2\\webapplication2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|solutionrelative:webapplication2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|d:\\back\\webapplication2\\webapplication2\\controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|solutionrelative:webapplication2\\controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|d:\\back\\webapplication2\\webapplication2\\controllers\\sessionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|solutionrelative:webapplication2\\controllers\\sessionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|d:\\back\\webapplication2\\webapplication2\\controllers\\promotioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|solutionrelative:webapplication2\\controllers\\promotioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|d:\\back\\webapplication2\\webapplication2\\controllers\\feedbackcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|solutionrelative:webapplication2\\controllers\\feedbackcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|d:\\back\\webapplication2\\webapplication2\\controllers\\ticketscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|solutionrelative:webapplication2\\controllers\\ticketscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|d:\\back\\webapplication2\\webapplication2\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|solutionrelative:webapplication2\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|d:\\back\\webapplication2\\webapplication2\\controllers\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|solutionrelative:webapplication2\\controllers\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|d:\\back\\webapplication2\\webapplication2\\libman.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|solutionrelative:webapplication2\\libman.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|d:\\back\\webapplication2\\.editorconfig||{68B46364-D378-42F2-9E72-37D86C5F4468}",
+      "RelativeMoniker": "D:0:0:{D314FC04-FC2C-4B51-92FF-E6CC03D6B338}|WebApplication2\\WebApplication2.csproj|solutionrelative:.editorconfig||{68B46364-D378-42F2-9E72-37D86C5F4468}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 23,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 377,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "secrets.json",
+              "DocumentMoniker": "C:\\Users\\\u042E\u0440\u0456\u0439\u0412\u0430\u0441\u0438\u043B\u044C\u0454\u0432\\AppData\\Roaming\\Microsoft\\UserSecrets\\d5fd94ca-85b3-4dbd-88c6-73c34013f354\\secrets.json",
+              "ToolTip": "C:\\Users\\\u042E\u0440\u0456\u0439\u0412\u0430\u0441\u0438\u043B\u044C\u0454\u0432\\AppData\\Roaming\\Microsoft\\UserSecrets\\d5fd94ca-85b3-4dbd-88c6-73c34013f354\\secrets.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-03T21:43:06.718Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ReviewsController.cs",
+              "DocumentMoniker": "D:\\back\\WebApplication2\\WebApplication2\\Controllers\\ReviewsController.cs",
+              "RelativeDocumentMoniker": "WebApplication2\\Controllers\\ReviewsController.cs",
+              "ToolTip": "D:\\back\\WebApplication2\\WebApplication2\\Controllers\\ReviewsController.cs",
+              "RelativeToolTip": "WebApplication2\\Controllers\\ReviewsController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAUwCAAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T21:32:56.352Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PaymentsController.cs",
+              "DocumentMoniker": "D:\\back\\WebApplication2\\WebApplication2\\Controllers\\PaymentsController.cs",
+              "RelativeDocumentMoniker": "WebApplication2\\Controllers\\PaymentsController.cs",
+              "ToolTip": "D:\\back\\WebApplication2\\WebApplication2\\Controllers\\PaymentsController.cs",
+              "RelativeToolTip": "WebApplication2\\Controllers\\PaymentsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T21:31:34.241Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "TicketsController.cs",
+              "DocumentMoniker": "D:\\back\\WebApplication2\\WebApplication2\\Controllers\\TicketsController.cs",
+              "RelativeDocumentMoniker": "WebApplication2\\Controllers\\TicketsController.cs",
+              "ToolTip": "D:\\back\\WebApplication2\\WebApplication2\\Controllers\\TicketsController.cs",
+              "RelativeToolTip": "WebApplication2\\Controllers\\TicketsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T21:31:09.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "SessionsController.cs",
+              "DocumentMoniker": "D:\\back\\WebApplication2\\WebApplication2\\Controllers\\SessionsController.cs",
+              "RelativeDocumentMoniker": "WebApplication2\\Controllers\\SessionsController.cs",
+              "ToolTip": "D:\\back\\WebApplication2\\WebApplication2\\Controllers\\SessionsController.cs",
+              "RelativeToolTip": "WebApplication2\\Controllers\\SessionsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T21:29:06.339Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Payment.cs",
+              "DocumentMoniker": "D:\\back\\WebApplication2\\WebApplication2\\models\\Payment.cs",
+              "RelativeDocumentMoniker": "WebApplication2\\models\\Payment.cs",
+              "ToolTip": "D:\\back\\WebApplication2\\WebApplication2\\models\\Payment.cs",
+              "RelativeToolTip": "WebApplication2\\models\\Payment.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAzwAgAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T20:58:10.008Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Ticket.cs",
+              "DocumentMoniker": "D:\\back\\WebApplication2\\WebApplication2\\models\\Ticket.cs",
+              "RelativeDocumentMoniker": "WebApplication2\\models\\Ticket.cs",
+              "ToolTip": "D:\\back\\WebApplication2\\WebApplication2\\models\\Ticket.cs",
+              "RelativeToolTip": "WebApplication2\\models\\Ticket.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAYwAkAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T20:57:47.767Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Session.cs",
+              "DocumentMoniker": "D:\\back\\WebApplication2\\WebApplication2\\models\\Session.cs",
+              "RelativeDocumentMoniker": "WebApplication2\\models\\Session.cs",
+              "ToolTip": "D:\\back\\WebApplication2\\WebApplication2\\models\\Session.cs",
+              "RelativeToolTip": "WebApplication2\\models\\Session.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAgwAcAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T20:57:29.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Feedback.cs",
+              "DocumentMoniker": "D:\\back\\WebApplication2\\WebApplication2\\models\\Feedback.cs",
+              "RelativeDocumentMoniker": "WebApplication2\\models\\Feedback.cs",
+              "ToolTip": "D:\\back\\WebApplication2\\WebApplication2\\models\\Feedback.cs",
+              "RelativeToolTip": "WebApplication2\\models\\Feedback.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T20:56:23.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "libman.json",
+              "DocumentMoniker": "D:\\back\\WebApplication2\\WebApplication2\\libman.json",
+              "RelativeDocumentMoniker": "WebApplication2\\libman.json",
+              "ToolTip": "D:\\back\\WebApplication2\\WebApplication2\\libman.json",
+              "RelativeToolTip": "WebApplication2\\libman.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-03T20:51:55.543Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Movie.cs",
+              "DocumentMoniker": "D:\\back\\WebApplication2\\WebApplication2\\models\\Movie.cs",
+              "RelativeDocumentMoniker": "WebApplication2\\models\\Movie.cs",
+              "ToolTip": "D:\\back\\WebApplication2\\WebApplication2\\models\\Movie.cs",
+              "RelativeToolTip": "WebApplication2\\models\\Movie.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T20:43:05.141Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\back\\WebApplication2\\WebApplication2\\appsettings.json",
+              "RelativeDocumentMoniker": "WebApplication2\\appsettings.json",
+              "ToolTip": "D:\\back\\WebApplication2\\WebApplication2\\appsettings.json",
+              "RelativeToolTip": "WebApplication2\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-18T15:29:39.31Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": ".editorconfig",
+              "DocumentMoniker": "D:\\back\\WebApplication2\\.editorconfig",
+              "RelativeDocumentMoniker": ".editorconfig",
+              "ToolTip": "D:\\back\\WebApplication2\\.editorconfig",
+              "RelativeToolTip": ".editorconfig",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-03-18T15:29:36.228Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "FeedbackController.cs",
+              "DocumentMoniker": "D:\\back\\WebApplication2\\WebApplication2\\Controllers\\FeedbackController.cs",
+              "RelativeDocumentMoniker": "WebApplication2\\Controllers\\FeedbackController.cs",
+              "ToolTip": "D:\\back\\WebApplication2\\WebApplication2\\Controllers\\FeedbackController.cs",
+              "RelativeToolTip": "WebApplication2\\Controllers\\FeedbackController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T18:31:55.352Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Favorite.cs",
+              "DocumentMoniker": "D:\\back\\WebApplication2\\WebApplication2\\models\\Favorite.cs",
+              "RelativeDocumentMoniker": "WebApplication2\\models\\Favorite.cs",
+              "ToolTip": "D:\\back\\WebApplication2\\WebApplication2\\models\\Favorite.cs",
+              "RelativeToolTip": "WebApplication2\\models\\Favorite.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAcwBgAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T18:20:16.567Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "MovieController.cs",
+              "DocumentMoniker": "D:\\back\\WebApplication2\\WebApplication2\\Controllers\\MovieController.cs",
+              "RelativeDocumentMoniker": "WebApplication2\\Controllers\\MovieController.cs",
+              "ToolTip": "D:\\back\\WebApplication2\\WebApplication2\\Controllers\\MovieController.cs",
+              "RelativeToolTip": "WebApplication2\\Controllers\\MovieController.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAowEgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T18:18:33.538Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FavoriteController.cs",
+              "DocumentMoniker": "D:\\back\\WebApplication2\\WebApplication2\\Controllers\\FavoriteController.cs",
+              "RelativeDocumentMoniker": "WebApplication2\\Controllers\\FavoriteController.cs",
+              "ToolTip": "D:\\back\\WebApplication2\\WebApplication2\\Controllers\\FavoriteController.cs",
+              "RelativeToolTip": "WebApplication2\\Controllers\\FavoriteController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T18:06:58.66Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Review.cs",
+              "DocumentMoniker": "D:\\back\\WebApplication2\\WebApplication2\\models\\Review.cs",
+              "RelativeDocumentMoniker": "WebApplication2\\models\\Review.cs",
+              "ToolTip": "D:\\back\\WebApplication2\\WebApplication2\\models\\Review.cs",
+              "RelativeToolTip": "WebApplication2\\models\\Review.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwAcAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T18:04:06.744Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MyDbContext.cs",
+              "DocumentMoniker": "D:\\back\\WebApplication2\\WebApplication2\\Data\\MyDbContext.cs",
+              "RelativeDocumentMoniker": "WebApplication2\\Data\\MyDbContext.cs",
+              "ToolTip": "D:\\back\\WebApplication2\\WebApplication2\\Data\\MyDbContext.cs",
+              "RelativeToolTip": "WebApplication2\\Data\\MyDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T18:56:05.842Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\back\\WebApplication2\\WebApplication2\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "WebApplication2\\Controllers\\UserController.cs",
+              "ToolTip": "D:\\back\\WebApplication2\\WebApplication2\\Controllers\\UserController.cs",
+              "RelativeToolTip": "WebApplication2\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T18:55:40.953Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\back\\WebApplication2\\WebApplication2\\models\\User.cs",
+              "RelativeDocumentMoniker": "WebApplication2\\models\\User.cs",
+              "ToolTip": "D:\\back\\WebApplication2\\WebApplication2\\models\\User.cs",
+              "RelativeToolTip": "WebApplication2\\models\\User.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAwwBoAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T18:52:49.855Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "PromotionController.cs",
+              "DocumentMoniker": "D:\\back\\WebApplication2\\WebApplication2\\Controllers\\PromotionController.cs",
+              "RelativeDocumentMoniker": "WebApplication2\\Controllers\\PromotionController.cs",
+              "ToolTip": "D:\\back\\WebApplication2\\WebApplication2\\Controllers\\PromotionController.cs",
+              "RelativeToolTip": "WebApplication2\\Controllers\\PromotionController.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAowAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T18:48:58.873Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Promotion.cs",
+              "DocumentMoniker": "D:\\back\\WebApplication2\\WebApplication2\\models\\Promotion.cs",
+              "RelativeDocumentMoniker": "WebApplication2\\models\\Promotion.cs",
+              "ToolTip": "D:\\back\\WebApplication2\\WebApplication2\\models\\Promotion.cs",
+              "RelativeToolTip": "WebApplication2\\models\\Promotion.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwAsAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T18:48:27.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\back\\WebApplication2\\WebApplication2\\Program.cs",
+              "RelativeDocumentMoniker": "WebApplication2\\Program.cs",
+              "ToolTip": "D:\\back\\WebApplication2\\WebApplication2\\Program.cs",
+              "RelativeToolTip": "WebApplication2\\Program.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACkAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T17:56:36.82Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

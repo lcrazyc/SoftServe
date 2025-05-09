@@ -1,0 +1,42 @@
+C:\Users\Asus\Desktop\VIKO\Web Services\project\WebApplication2\WebApplication2\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\Asus\Desktop\VIKO\Web Services\project\WebApplication2\WebApplication2\bin\Debug\net6.0\appsettings.json
+C:\Users\Asus\Desktop\VIKO\Web Services\project\WebApplication2\WebApplication2\bin\Debug\net6.0\WebApplication2.exe
+C:\Users\Asus\Desktop\VIKO\Web Services\project\WebApplication2\WebApplication2\bin\Debug\net6.0\WebApplication2.deps.json
+C:\Users\Asus\Desktop\VIKO\Web Services\project\WebApplication2\WebApplication2\bin\Debug\net6.0\WebApplication2.runtimeconfig.json
+C:\Users\Asus\Desktop\VIKO\Web Services\project\WebApplication2\WebApplication2\bin\Debug\net6.0\WebApplication2.dll
+C:\Users\Asus\Desktop\VIKO\Web Services\project\WebApplication2\WebApplication2\bin\Debug\net6.0\WebApplication2.pdb
+C:\Users\Asus\Desktop\VIKO\Web Services\project\WebApplication2\WebApplication2\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\Asus\Desktop\VIKO\Web Services\project\WebApplication2\WebApplication2\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Asus\Desktop\VIKO\Web Services\project\WebApplication2\WebApplication2\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Asus\Desktop\VIKO\Web Services\project\WebApplication2\WebApplication2\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Asus\Desktop\VIKO\Web Services\project\WebApplication2\WebApplication2\obj\Debug\net6.0\WebApplication2.csproj.AssemblyReference.cache
+C:\Users\Asus\Desktop\VIKO\Web Services\project\WebApplication2\WebApplication2\obj\Debug\net6.0\WebApplication2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\Desktop\VIKO\Web Services\project\WebApplication2\WebApplication2\obj\Debug\net6.0\WebApplication2.AssemblyInfoInputs.cache
+C:\Users\Asus\Desktop\VIKO\Web Services\project\WebApplication2\WebApplication2\obj\Debug\net6.0\WebApplication2.AssemblyInfo.cs
+C:\Users\Asus\Desktop\VIKO\Web Services\project\WebApplication2\WebApplication2\obj\Debug\net6.0\WebApplication2.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\VIKO\Web Services\project\WebApplication2\WebApplication2\obj\Debug\net6.0\WebApplication2.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Asus\Desktop\VIKO\Web Services\project\WebApplication2\WebApplication2\obj\Debug\net6.0\WebApplication2.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Asus\Desktop\VIKO\Web Services\project\WebApplication2\WebApplication2\obj\Debug\net6.0\staticwebassets\msbuild.WebApplication2.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Asus\Desktop\VIKO\Web Services\project\WebApplication2\WebApplication2\obj\Debug\net6.0\staticwebassets\msbuild.build.WebApplication2.props
+C:\Users\Asus\Desktop\VIKO\Web Services\project\WebApplication2\WebApplication2\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.WebApplication2.props
+C:\Users\Asus\Desktop\VIKO\Web Services\project\WebApplication2\WebApplication2\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.WebApplication2.props
+C:\Users\Asus\Desktop\VIKO\Web Services\project\WebApplication2\WebApplication2\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\Asus\Desktop\VIKO\Web Services\project\WebApplication2\WebApplication2\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\Asus\Desktop\VIKO\Web Services\project\WebApplication2\WebApplication2\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\Asus\Desktop\VIKO\Web Services\project\WebApplication2\WebApplication2\obj\Debug\net6.0\scopedcss\bundle\WebApplication2.styles.css
+C:\Users\Asus\Desktop\VIKO\Web Services\project\WebApplication2\WebApplication2\obj\Debug\net6.0\WebApplication2.csproj.CopyComplete
+C:\Users\Asus\Desktop\VIKO\Web Services\project\WebApplication2\WebApplication2\obj\Debug\net6.0\WebApplication2.dll
+C:\Users\Asus\Desktop\VIKO\Web Services\project\WebApplication2\WebApplication2\obj\Debug\net6.0\refint\WebApplication2.dll
+C:\Users\Asus\Desktop\VIKO\Web Services\project\WebApplication2\WebApplication2\obj\Debug\net6.0\WebApplication2.pdb
+C:\Users\Asus\Desktop\VIKO\Web Services\project\WebApplication2\WebApplication2\obj\Debug\net6.0\WebApplication2.genruntimeconfig.cache
+C:\Users\Asus\Desktop\VIKO\Web Services\project\WebApplication2\WebApplication2\obj\Debug\net6.0\ref\WebApplication2.dll
+D:\WebApplication2\WebApplication2\WebApplication2\obj\Debug\net6.0\WebApplication2.csproj.AssemblyReference.cache
+D:\WebApplication2\WebApplication2\WebApplication2\obj\Debug\net6.0\WebApplication2.GeneratedMSBuildEditorConfig.editorconfig
+D:\WebApplication2\WebApplication2\WebApplication2\obj\Debug\net6.0\WebApplication2.AssemblyInfoInputs.cache
+D:\WebApplication2\WebApplication2\WebApplication2\obj\Debug\net6.0\WebApplication2.AssemblyInfo.cs
+D:\WebApplication2\WebApplication2\WebApplication2\obj\Debug\net6.0\WebApplication2.csproj.CoreCompileInputs.cache
+D:\WebApplication2\WebApplication2\WebApplication2\obj\Debug\net6.0\WebApplication2.MvcApplicationPartsAssemblyInfo.cs
+D:\WebApplication2\WebApplication2\WebApplication2\obj\Debug\net6.0\WebApplication2.MvcApplicationPartsAssemblyInfo.cache
+D:\WebApplication2\WebApplication2\WebApplication2\obj\Debug\net6.0\WebApplication2.dll
+D:\WebApplication2\WebApplication2\WebApplication2\obj\Debug\net6.0\refint\WebApplication2.dll
+D:\WebApplication2\WebApplication2\WebApplication2\obj\Debug\net6.0\WebApplication2.pdb
