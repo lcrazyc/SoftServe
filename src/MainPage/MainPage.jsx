@@ -42,7 +42,7 @@ const MainPage = () => {
           <img src="./Icons/Right.svg" alt="→" />
         </button>
       </div>
-    </section> 
+    </section>  
   );
 
   return (
