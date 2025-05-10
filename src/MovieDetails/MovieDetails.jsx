@@ -1,5 +1,5 @@
 import React from "react";
-import movie from "../../movies.json";
+import movie from "../movies.json";
 import "./MovieDetails.css";
 
 const MovieDetail = () => {
