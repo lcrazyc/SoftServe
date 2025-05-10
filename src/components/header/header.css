@@ -8,11 +8,18 @@ background-color: var(--black-light-color);
 position: relative;
 }
 .logo-circle{
-  background-color: var(--blue-color);
-  border-radius: 50%;
-  height: 48px;
-  width: 48px;
+    display: flex;
+    background-color: var(--blue-color);
+    border-radius: 50%;
+    height: 48px;
+    width: 48px;
+    align-items: center;
+    justify-content: center;
 }
+ .logo-circle img{
+    max-width: 70%;
+    height: auto;
+} 
 header input{
   padding: 4px 12px;
   border-radius: 13px;

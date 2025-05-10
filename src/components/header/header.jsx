@@ -8,7 +8,9 @@ const Header = () =>  {
 
   return (
     <header className="header">
-      <div className="logo-circle"></div>
+      <div className="logo-circle">
+        <img src="./Icons/logo.svg" alt="logo" />
+      </div>
       <input className="search-bar" placeholder="Пошук" />
       <div className="header-icons">
         <img src="./Icons/Zakladku.svg" alt="Save" className="icon"/>
