@@ -8,7 +8,7 @@ import "./SearchPage.css";
 const SearchPage = () => {
   const [genre, setGenre] = useState("");
   const [year, setYear] = useState("");
-  const [rating, setRating] = useState("");
+  const [rating, setRating] = useState(""); 
 
   const filteredFilms = filmsData.filter(film => {
     return (
