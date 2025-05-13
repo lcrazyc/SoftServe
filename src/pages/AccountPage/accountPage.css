@@ -19,7 +19,9 @@
     gap: 128px;
     flex: 1; 
 }
-
+.account-content .admin{
+    color: var(--blue-color);
+}
  /* частина даних про акаунт */
  .account-profile-content{
     display: flex;
@@ -119,11 +121,13 @@
     border-radius: 13px;
     aspect-ratio: 1 / 1;
     display: flex;
-  align-items: center; /* центр по вертикали */
+  align-items: center; 
   justify-content: center;
   width: 264px;
   height: 264px;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
+  padding: 10px;
+  text-align: center;
 }
 .promotion-code:hover{
     transform: scale(1.05);
@@ -131,7 +135,8 @@
   color: var(--white-color);
 }
 .promotion-code h2{
-    color: var(--black-light-color-color);
+    color: var(--black-light-color);
+    
 }
 
 
