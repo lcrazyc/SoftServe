@@ -1,10 +1,14 @@
 import React from "react";
-import movie from "../movies.json";
-import Header from '../components/header/header';
-import Footer from '../components/footer/footer';
+import movies from '../../movies.json';
+import { useParams, useNavigate } from "react-router-dom";
+import Header from '../../components/header/header';
+import Footer from '../../components/footer/footer';
 import "./MovieDetails.css";
 
-const MovieDetail = () => {
+const MovieDetails = () => {
+  const { id } = useParams();
+const navigate = useNavigate();
+  const movie = movies.find((m) => m.id.toString() === id);
   return (
     <div>
 
@@ -48,9 +52,11 @@ const MovieDetail = () => {
 
               <p className="movie-description">{movie.description}</p>
 
-              <button className="select-session-btn">
+              <button
+                className="select-session-btn"
+                onClick={() => navigate(`/sessions?movieId=${movie.id}`)}>
                 Обрати сеанс
-              </button>
+                </button>
             </div>
 
             <aside className="movie-details">
@@ -94,4 +100,4 @@ const MovieDetail = () => {
   );
 }
 
-export default MovieDetail;
+export default MovieDetails;
