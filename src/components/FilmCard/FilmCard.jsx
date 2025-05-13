@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './FilmCard.css';
+
 const FilmCard = ({ film }) => {
   const navigate = useNavigate();
 
@@ -15,7 +16,12 @@ const FilmCard = ({ film }) => {
 
   return (
     <div className="film-card">
-      <img src={film.poster} alt={film.title} className="film-poster" />
+      <div className="poster-wrapper">
+        <img src={film.poster} alt={film.title} className="film-poster" />
+      </div>
+
+      <img src="./Icons/Zakladku.svg" alt="bookmark" className="bookmark-icon-outside" />
+
       <h2 className="film-title">{film.title}</h2>
       <p className="film-year">{film.year} рік</p>
       <div className="film-rating">
@@ -27,4 +33,5 @@ const FilmCard = ({ film }) => {
     </div>
   );
 };
+
 export default FilmCard;
