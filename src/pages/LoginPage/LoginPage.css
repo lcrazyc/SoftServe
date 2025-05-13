@@ -88,5 +88,5 @@
 }
 input::placeholder {
   color: var(--black); /* Light gray color */
-  opacity: 1; /* Ensures full visibility (some browsers reduce opacity by default) */
+  
 }
