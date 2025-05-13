@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Header from '../../components/header/header'; 
 import Footer from '../../components/footer/footer'; 
 import './accountPage.css'; 
@@ -12,7 +13,17 @@ const handleCopy = () => {
         console.error('Помилка копіювання: ', err);
       });
   };
+
 const AccountPage = () => {
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+  // Тут можешь добавить очистку localStorage/sessionStorage при необходимости
+  navigate('/login');
+};
+
+    
+
   return (
     <div className="account-page">
       <Header />
@@ -45,7 +56,7 @@ const AccountPage = () => {
                         </div>
                 </div>
                 <button>Скачати квитки в pdf</button>
-                <h2 className="account-exit">Вийти з профілю</h2>
+                <h2 className="account-exit" onClick={handleLogout}>Вийти з профілю</h2>
             </div>
         </div>
         <div className="account-promotion">

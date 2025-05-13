@@ -1,10 +1,10 @@
 import React from "react";
-import Header from "../components/header/header";
-import Footer from "../components/footer/footer";
-import FilmCard from "../components/FilmCard/FilmCard";
-import filmsData from "../movies.json";
+import Header from '../../components/header/header';
+import Footer from '../../components/footer/footer';
+import FilmCard from "../../components/FilmCard/FilmCard";
+import filmsData from "../../movies.json";
 
-import "../App.css";
+import "../../App.css";
 import "./MainPage.css";
 
 const MainPage = () => {

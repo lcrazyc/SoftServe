@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Header from '../../components/header/header'; 
 import Footer from '../../components/footer/footer'; 
 import './LoginPage.css'; 
 
 const LoginPage = () => {
+  const navigate = useNavigate();
   const [emailPlaceholder, setEmailPlaceholder] = useState('pochta@gmail.com');
   const [passwordPlaceholder, setPasswordPlaceholder] = useState('Введіть пароль');
   const [formData, setFormData] = useState({
@@ -35,6 +37,10 @@ const LoginPage = () => {
     // Remove placeholder when typing starts
     if (name === 'email' && value) setEmailPlaceholder('');
     if (name === 'password' && value) setPasswordPlaceholder('');
+  };
+
+  const goToRegister = () => {
+    navigate('/register'); // ← переход
   };
 
   return (
@@ -79,11 +85,15 @@ const LoginPage = () => {
                 />
               </div>
             </div>
-            <button>Увійти в аккаунт</button>
+            <button type="button" onClick={() => navigate('/account')}>
+              Увійти в аккаунт
+            </button>
           </form>
           <div className="not-reg">
             <p>Ще не маєте аккаунту?</p>
-            <p className="log-reg">Зарєструватися</p>
+            <p className="log-reg" onClick={goToRegister} style={{ cursor: 'pointer', color: 'blue' }}>
+              Зарєструватися
+            </p>
           </div>            
         </div>
       </main>

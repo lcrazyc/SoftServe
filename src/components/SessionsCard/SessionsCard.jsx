@@ -1,8 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './FilmCard.css';
-
-const FilmCard = ({ film }) => {
+import './SessionsCard.css';
+const SessionsCard = ({ film }) => {
   const navigate = useNavigate();
 
   const handleDetailsClick = () => {
@@ -13,25 +12,20 @@ const FilmCard = ({ film }) => {
     const handleBuyClick = () => {
       navigate(`/buy_button/${film.id}`);
     };
-
+    
   return (
     <div className="film-card">
-      <div className="poster-wrapper">
-        <img src={film.poster} alt={film.title} className="film-poster" />
-      </div>
-
-      <img src="./Icons/Zakladku.svg" alt="bookmark" className="bookmark-icon-outside" />
-
+      <img src={film.poster} alt={film.title} className="film-poster" />
       <h2 className="film-title">{film.title}</h2>
-      <p className="film-year">{film.year} рік</p>
       <div className="film-rating">
         <img src="./Icons/Star.svg" alt="star" className="star-icon" />
         <span>{film.rating}</span>
       </div>
+      <p className="film-year">{film.year} рік</p>
+      <p className="date">13:00</p>
       <button className="details-button" onClick={handleDetailsClick}>Детальніше про фільм</button>
       <button className="buy-button" onClick={handleBuyClick}>Купити квитки</button>
     </div>
   );
 };
-
-export default FilmCard;
+export default SessionsCard;
