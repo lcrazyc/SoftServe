@@ -11,15 +11,15 @@ const getDetails = async (data) => {
             const response = await axios.get('https://localhost:9999/api/Movies', {
                  params:{
                 "id": data.id,  
-                "poster": data.poster,
+                "poster_url": data.poster_url,
                 "title": data.title,
                 "description": data.description,
-                "genre": data.genre,
+                "genres": data.genres,
                 "rating": data.rating,
-                "year": data.year,
+                "release_year": data.release_year,
                 "director": data.director,
-                "duration": data.duration,
-                "trailer": data.trailer,
+                "duration_minutes": data.duration_minutes,
+                "trailer_url": data.trailer_url,
                 "cast": data.cast
             },
             headers:{
@@ -46,19 +46,19 @@ const navigate = useNavigate();
         <main className="movie-main">
           <section className="movie-content">
             <div className="movie-poster">
-            <img src={data.poster} alt="" className="poster-img" />
+            <img src={data.poster_url} alt="" className="poster-img" />
             </div>
 
             <div className="movie-info">
               <div className="info-header">
-                <p className="movie-title">{data.title}</p>
+                <h1 className="movie-title">{data.title}</h1>
                 <button className="movie-save" onClick={() => navigate('/saved')}>
                   <img src="./Icons/Zakladku mini.svg" alt="Закладки" className="w-6" />
                 </button>
               </div>
 
               <div className="genre-tags">
-                {data.genre.map((g, i) => (
+                {data.genres.map((g, i) => (
                   <span key={i} className="genre-tag">{g}</span>
                 ))}
               </div>
@@ -90,7 +90,7 @@ const navigate = useNavigate();
             <aside className="movie-details">
               <div className="detail-block">
                 <p className="detail-label">Рік виходу:</p>
-                <p className="detail-value">{data.year}</p>
+                <p className="detail-value">{data.release_year}</p>
               </div>
               <div className="detail-block">
                 <p className="detail-label">Режисер:</p>
@@ -98,7 +98,7 @@ const navigate = useNavigate();
               </div>
               <div className="detail-block">
                 <p className="detail-label">Час:</p>
-                <p className="detail-value">{data.duration}</p>
+                <p className="detail-value">{data.duration_minutes}</p>
               </div>
               <div className="detail-block">
                 <p className="detail-label">Актори:</p>
@@ -108,12 +108,12 @@ const navigate = useNavigate();
           </section>
 
           <section className="movie-trailer">
-            <p className="trailer-title">Трейлер</p>
+            <h1 className="trailer-title">Трейлер</h1>
             <div className="trailer-box">
               <iframe
                 width="100%"
                 height="315"
-                src={data.trailer.replace("watch?v=", "embed/")}
+                src={data.trailer_url.replace("watch?v=", "embed/")}
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

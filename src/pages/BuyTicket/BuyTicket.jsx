@@ -1,35 +1,76 @@
-import React, { useState, useEffect } from 'react';
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { useParams, useNavigate } from "react-router-dom";
 import Header from '../../components/header/header';
 import Footer from '../../components/footer/footer';
+import GoogleIcon from '../../Icons/Google.svg';
+import AppleIcon from '../../Icons/Apple.svg';
 import './BuyTicket.css';
+
+const getDetails = async (data) => {
+        try {
+            const response = await axios.get('https://localhost:9999/api/Sessions', {
+                 params:{
+                "id": data.id,  
+                "movie_id": data.movie_id,
+                "date": data.date,
+                "session_time": data.session_time,
+                "price": data.price
+            },
+            headers:{
+                'Content-Type': 'application/json'
+            }
+        });
+        const response2 = await axios.get('https://localhost:9999/api/Movies/${title}', {
+            headers:{
+                'Content-Type': 'application/json'
+            }
+        });
+
+          localStorage.setItem("data", JSON.stringify(response.data));
+          reloadPage();
+          handleChangeState();
+        } catch (error) {
+        }
+    };
 
 const BuyTicket = () => {
   const [seatType, setSeatType] = useState('standard');
   const [selectedSeats, setSelectedSeats] = useState([]);
   const [price, setPrice] = useState(160);
   const seatCount = 35;
+  const seatsPerRow = 7;
 
-  useEffect(() => {
-    setPrice(seatType === 'vip' ? 240 : 160);
-  }, [seatType]);
+   useEffect(() => {
+    let total = 0;
+    selectedSeats.forEach(id => {
+        total += id < seatsPerRow ? 240 : 160;
+    });
+    setPrice(total);
+  }, [selectedSeats]);
+
+  const isFirstRow = (seatIndex) => seatIndex < seatsPerRow;
 
   const toggleSeat = (id) => {
-    setSelectedSeats(prev =>
-      prev.includes(id) ? prev.filter(seat => seat !== id) : [...prev, id]
-    );
+    const isSelected = selectedSeats.includes(id);
+    if (isSelected) {
+        setSelectedSeats(prev => prev.filter(seat => seat !== id));
+    } else {
+        setSelectedSeats(prev => [...prev, id]);
+    }
   };
 
   return (
-    <div>
+    <div className="ticket-page">
         <Header />
 
         <div className="container">
         <div className="left-panel">
-            <p className="left-panel-name">Купівля квитка</p>
+            <h1 className="left-panel-name">Купівля квитка</h1>
 
             <div className="form-row">
             <div className="form-column">
-                <p className="form-label">Місце</p>
+                <h2 className="form-label">Місце</h2>
                 <label className="input-radio">
                 <input
                     type="radio"
@@ -53,13 +94,13 @@ const BuyTicket = () => {
             </div>
 
             <div className="form-column">
-                <p className="form-label">Ціна</p>
+                <h2 className="form-label">Ціна</h2>
                 <div className="price-box">{price}.00 грн</div>
             </div>
 
             <div className="form-column">
-                <p className="form-label">Назва фільму</p>
-                <p className="placeholder">дата і час</p>
+                <h2 className="form-label">{data.title}</h2>
+                <p className="placeholder">{data.date} {data.session_time}</p>
             </div>
             </div>
 
@@ -81,11 +122,11 @@ const BuyTicket = () => {
             <p className="payment-methods">Або інші способи оплати</p>
             <div className="buttons">
             <button className="pay-btn">
-                <img src="../Icons/Google.svg" alt="Google Pay" />
+                <img src={GoogleIcon} alt="Google Pay" />
                 Pay
             </button>
             <button className="pay-btn">
-                <img src="../Icons/Apple.svg" alt="Apple Pay" />
+                <img src={AppleIcon} alt="Apple Pay" />
                 Pay
             </button>
             </div>
@@ -94,13 +135,19 @@ const BuyTicket = () => {
         </div>
 
         <div className="right-panel">
-            {[...Array(seatCount)].map((_, i) => (
-            <div
-                key={i}
-                className={`seat ${selectedSeats.includes(i) ? 'selected' : ''}`}
-                onClick={() => toggleSeat(i)}
+          {[...Array(seatCount)].map((_, i) => {
+            const isDisabled =
+              (seatType === 'standard' && isFirstRow(i)) ||
+              (seatType === 'vip' && !isFirstRow(i));
+
+            return (
+              <div
+              key={i}
+              className={`seat ${selectedSeats.includes(i) ? 'selected' : ''} ${i < seatsPerRow ? 'vip' : ''}`}
+              onClick={() => toggleSeat(i)}
             />
-            ))}
+            );
+          })}
         </div>
         </div>
         <Footer></Footer>
