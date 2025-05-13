@@ -24,7 +24,7 @@ const navigate = useNavigate();
             <div className="movie-info">
               <div className="info-header">
                 <p className="movie-title">{movie.title}</p>
-                <button className="movie-save">
+                <button className="movie-save" onClick={() => navigate('/saved')}>
                   <img src="./Icons/Zakladku mini.svg" alt="Закладки" className="w-6" />
                 </button>
               </div>
