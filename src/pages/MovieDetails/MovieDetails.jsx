@@ -1,16 +1,44 @@
-import React from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 import movies from '../../movies.json';
 import { useParams, useNavigate } from "react-router-dom";
 import Header from '../../components/header/header';
 import Footer from '../../components/footer/footer';
 import "./MovieDetails.css";
 
+const getDetails = async (data) => {
+        try {
+            const response = await axios.get('https://localhost:9999/api/Movies', {
+                 params:{
+                "id": data.id,  
+                "poster": data.poster,
+                "title": data.title,
+                "description": data.description,
+                "genre": data.genre,
+                "rating": data.rating,
+                "year": data.year,
+                "director": data.director,
+                "duration": data.duration,
+                "trailer": data.trailer,
+                "cast": data.cast
+            },
+            headers:{
+                'Content-Type': 'application/json'
+            }
+        });
+          localStorage.setItem("data", JSON.stringify(response.data));
+          reloadPage();
+          handleChangeState();
+        } catch (error) {
+        }
+    };
+
 const MovieDetails = () => {
   const { id } = useParams();
 const navigate = useNavigate();
   const movie = movies.find((m) => m.id.toString() === id);
   return (
-    <div>
+    <div className="movie-page-container">
 
       <Header />
 
@@ -18,19 +46,19 @@ const navigate = useNavigate();
         <main className="movie-main">
           <section className="movie-content">
             <div className="movie-poster">
-            <img src={movie.poster} alt="" className="poster-img" />
+            <img src={data.poster} alt="" className="poster-img" />
             </div>
 
             <div className="movie-info">
               <div className="info-header">
-                <p className="movie-title">{movie.title}</p>
+                <p className="movie-title">{data.title}</p>
                 <button className="movie-save" onClick={() => navigate('/saved')}>
                   <img src="./Icons/Zakladku mini.svg" alt="Закладки" className="w-6" />
                 </button>
               </div>
 
               <div className="genre-tags">
-                {movie.genre.map((g, i) => (
+                {data.genre.map((g, i) => (
                   <span key={i} className="genre-tag">{g}</span>
                 ))}
               </div>
@@ -42,19 +70,19 @@ const navigate = useNavigate();
                     src="./Icons/Star.svg"
                     alt="Зірка"
                     className="w-5"
-                    style={{ opacity: i < Math.round(movie.rating) ? 1 : 0.3 }}
+                    style={{ opacity: i < Math.round(data.rating) ? 1 : 0.3 }}
                   />
                 ))}
-                <p className="review-count">{Math.floor(movie.rating * 25)} відгуків</p>
+                <p className="review-count">{Math.floor(data.rating * 25)} відгуків</p>
               </div>
 
               <div className="movie-frame" />
 
-              <p className="movie-description">{movie.description}</p>
+              <p className="movie-description">{data.description}</p>
 
               <button
                 className="select-session-btn"
-                onClick={() => navigate(`/sessions?movieId=${movie.id}`)}>
+                onClick={() => navigate(`/sessions?movieId=${data.id}`)}>
                 Обрати сеанс
                 </button>
             </div>
@@ -62,19 +90,19 @@ const navigate = useNavigate();
             <aside className="movie-details">
               <div className="detail-block">
                 <p className="detail-label">Рік виходу:</p>
-                <p className="detail-value">{movie.year}</p>
+                <p className="detail-value">{data.year}</p>
               </div>
               <div className="detail-block">
                 <p className="detail-label">Режисер:</p>
-                <p className="detail-value">{movie.director}</p>
+                <p className="detail-value">{data.director}</p>
               </div>
               <div className="detail-block">
                 <p className="detail-label">Час:</p>
-                <p className="detail-value">{movie.duration}</p>
+                <p className="detail-value">{data.duration}</p>
               </div>
               <div className="detail-block">
                 <p className="detail-label">Актори:</p>
-                <p className="detail-value">{movie.cast.join(", ")}</p>
+                <p className="detail-value">{data.cast.join(", ")}</p>
               </div>
             </aside>
           </section>
@@ -85,7 +113,7 @@ const navigate = useNavigate();
               <iframe
                 width="100%"
                 height="315"
-                src={movie.trailer.replace("watch?v=", "embed/")}
+                src={data.trailer.replace("watch?v=", "embed/")}
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
