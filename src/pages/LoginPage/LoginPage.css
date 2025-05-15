@@ -1,3 +1,7 @@
+.login-content .logo-log img{
+   width: 70%;
+    height: auto;
+}
 .login-content .logo-log{
     height: 100px;
     width: 100px;
@@ -7,86 +11,81 @@
         align-items: center;
     justify-content: center;
 }
-.login-content .logo-log img{
-   width: 70%;
-    height: auto;
-}
 .login-logo{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 14px;
     align-items: center;
 }
-.log-item{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.log-item input{
+    color: var(--black-color);
+    margin: 0;
+    padding: 9px 20px;
 }
-.login-content button{
-     font-weight: 700;
-    font-size: 20px;
-    padding: 16px 20px;
-    cursor: pointer;
+.log-item input::placeholder{
+    color: var(--black-light-color);
 }
-.not-reg{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
+.log-reg:hover{
+    color: var(--purple-color);
+}
+.login-content .log-item h2{
+    color: var(--grey-color);
 }
 .not-reg p{
     font-family: "Montserrat", sans-serif;
      font-weight: 600;
     font-size: 14px;
 }
-.log-reg{
+.login-content button{
+     font-weight: 700;
+    font-size: 20px;
+    padding: 16px 20px;
     cursor: pointer;
+    color: var(--white-color);
 }
-.log-reg:hover{
-    color: var(--purple-color);
+.log-item{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.login-content .account-item-box{
+    width: auto;
+}
+.login-content form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 70%;
+}
+.not-reg{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+     width: 70%;
 }
 .login-window{
     display: flex;
     flex-direction: column;
-    gap: 36px;
-    align-items: center;
+    justify-content: center;
+    padding: 80px ;
     background-color: var(--black-light-color);
-    border-radius: 13px;
     box-shadow: inset 0px 4px 87px 0px rgba(3, 169, 244, 0.17);
-    padding: 80px;
-    width:20%;
-}
-.login-content form{
-     display: flex;
-    flex-direction: column;
-    gap: 36px;
-    width: 100%;
+    border-radius: 13px;
+    gap: 54px;
+    width: 60%;
+    align-items: center;
 }
 .login-content{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 70px;
-    flex: 1;
-}
-
-.login-container{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-.input{
-    height: 30px;
-    width: 90%;
     justify-content: center;
-    color: var(--black);
-    border-radius: 13px;
-    box-shadow: inset 0px 4px 7px 0px rgba(0, 0, 0, 0.25);
-    background: rgb(128, 128, 128);
-    padding: 6px 20px;
+    padding: 70px;
+    align-items: center;
+        flex: 1; 
 }
-input::placeholder {
-  color: var(--black); /* Light gray color */
-  
+.login-container{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
 }

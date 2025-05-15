@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
-import Header from '../../components/header/header'; 
-import Footer from '../../components/footer/footer'; 
-import './RegistrationPage.css'; 
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import Header from '../../components/header/header';
+import Footer from '../../components/footer/footer';
+import './RegistrationPage.css';
 
 const RegPage = () => {
-  const [emailPlaceholder, setEmailPlaceholder] = useState('pochta@gmail.com');
-  const [passwordPlaceholder, setPasswordPlaceholder] = useState('Введіть пароль');
-  const [namePlaceholder, setNamePlaceholder] = useState('Іван');
-  const [surnamePlaceholder, setSurnamePlaceholder] = useState('Іванов');
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -15,27 +13,7 @@ const RegPage = () => {
     sername: ''
   });
 
-  const handleFocus = (field) => {
-    if (field === 'email') setEmailPlaceholder('');
-    if (field === 'password') setPasswordPlaceholder('');
-    if (field === 'name') setNamePlaceholder('');
-    if (field === 'sername') setSurnamePlaceholder('');
-  };
-
-  const handleBlur = (field) => {
-    if (field === 'email' && !formData.email) {
-      setEmailPlaceholder('pochta@gmail.com');
-    }
-    if (field === 'password' && !formData.password) {
-      setPasswordPlaceholder('Введіть пароль');
-    }
-    if (field === 'name' && !formData.name) {
-      setNamePlaceholder('Іван');
-    }
-    if (field === 'sername' && !formData.sername) {
-      setSurnamePlaceholder('Іванов');
-    }
-  };
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -43,12 +21,34 @@ const RegPage = () => {
       ...prev,
       [name]: value
     }));
+  };
 
-    // Remove placeholder when typing starts
-    if (name === 'email' && value) setEmailPlaceholder('');
-    if (name === 'password' && value) setPasswordPlaceholder('');
-    if (name === 'name' && value) setNamePlaceholder('');
-    if (name === 'sername' && value) setSurnamePlaceholder('');
+  const handleRegister = async (e) => {
+    e.preventDefault();
+
+    const userPayload = {
+      username: formData.name,       // ім’я — це username
+      password_hash: formData.password,
+      email: formData.email,
+      role: 'user',                  // завжди юзер
+      promotions: '',
+      surname: formData.sername
+    };
+
+    try {
+      const response = await axios.post('https://localhost:9999/api/Users', userPayload, {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+
+      const userId = response.data.id;
+      console.log('Користувач зареєстрований:', response.data);
+      navigate(`/account/${userId}`);
+    } catch (error) {
+      console.error('Помилка при реєстрації:', error);
+      alert('Не вдалося зареєструвати користувача');
+    }
   };
 
   return (
@@ -62,73 +62,57 @@ const RegPage = () => {
             </div>
             <h1>Реєстрація</h1>
           </div>
-          <form action="">                    
+          <form onSubmit={handleRegister}>
             <div className="log-item">
               <h2>Прізвище</h2>
-              <div className="account-item-box">
                 <input
-                  className="input"
-                  type="text" 
+                  className="account-item-box"
+                  type="text"
                   name="sername"
-                  placeholder={surnamePlaceholder}
-                  onFocus={() => handleFocus('sername')}
-                  onBlur={() => handleBlur('sername')}
+                  placeholder="Іванов"
                   onChange={handleChange}
                   value={formData.sername}
                 />
-              </div>
             </div>
             <div className="log-item">
               <h2>Ім'я</h2>
-              <div className="account-item-box">
-                <input 
-                  className="input"
-                  type="text" 
+                <input
+                  className="account-item-box"
+                  type="text"
                   name="name"
-                  placeholder={namePlaceholder}
-                  onFocus={() => handleFocus('name')}
-                  onBlur={() => handleBlur('name')}
+                  placeholder="Іван"
                   onChange={handleChange}
                   value={formData.name}
                 />
-              </div>
             </div>
             <div className="log-item">
               <h2>Пошта</h2>
-              <div className="account-item-box">
                 <input
-                  className="input"
-                  type="email" 
+                  className="account-item-box"
+                  type="email"
                   name="email"
-                  placeholder={emailPlaceholder}
-                  onFocus={() => handleFocus('email')}
-                  onBlur={() => handleBlur('email')}
+                  placeholder="pochta@gmail.com"
                   onChange={handleChange}
                   value={formData.email}
                 />
-              </div>
             </div>
             <div className="log-item">
               <h2>Пароль</h2>
-              <div className="account-item-box">
-                <input 
-                  className="input"
-                  type="password" 
+                <input
+                  className="account-item-box"
+                  type="password"
                   name="password"
-                  placeholder={passwordPlaceholder}
-                  onFocus={() => handleFocus('password')}
-                  onBlur={() => handleBlur('password')}
+                  placeholder="Введіть пароль"
                   onChange={handleChange}
                   value={formData.password}
                 />
-              </div>
             </div>
-            <button>Зареєструватися</button>
+            <button type="submit">Зареєструватися</button>
           </form>
           <div className="not-reg">
             <p>Вже маєте аккаунт?</p>
             <p className="log-reg">Увійти</p>
-          </div>            
+          </div>
         </div>
       </main>
       <Footer />

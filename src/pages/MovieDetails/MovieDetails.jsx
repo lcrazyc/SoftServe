@@ -1,65 +1,53 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import movies from '../../movies.json';
 import { useParams, useNavigate } from "react-router-dom";
 import Header from '../../components/header/header';
 import Footer from '../../components/footer/footer';
 import "./MovieDetails.css";
 
-const getDetails = async (data) => {
-        try {
-            const response = await axios.get('https://localhost:9999/api/Movies', {
-                 params:{
-                "id": data.id,  
-                "poster_url": data.poster_url,
-                "title": data.title,
-                "description": data.description,
-                "genres": data.genres,
-                "rating": data.rating,
-                "release_year": data.release_year,
-                "director": data.director,
-                "duration_minutes": data.duration_minutes,
-                "trailer_url": data.trailer_url,
-                "cast": data.cast
-            },
-            headers:{
-                'Content-Type': 'application/json'
-            }
-        });
-          localStorage.setItem("data", JSON.stringify(response.data));
-          reloadPage();
-          handleChangeState();
-        } catch (error) {
-        }
+const MovieDetails = () => {
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const [movie, setMovie] = useState(null);
+
+  useEffect(() => {
+    const fetchMovie = async () => {
+      try {
+        const response = await axios.get(`https://localhost:9999/api/Movies/${id}`);
+        setMovie(response.data);
+      } catch (error) {
+        console.error("Помилка:", error);
+      }
     };
 
-const MovieDetails = () => {
-  const { id } = useParams();
-const navigate = useNavigate();
-  const movie = movies.find((m) => m.id.toString() === id);
+    fetchMovie();
+  }, [id]);
+
+  if (!movie) {
+    return <div>Завантаження...</div>;
+  }
+
   return (
     <div className="movie-page-container">
-
       <Header />
-
       <div className="movie-page">
         <main className="movie-main">
           <section className="movie-content">
             <div className="movie-poster">
-            <img src={data.poster_url} alt="" className="poster-img" />
+              <img src={movie.poster_url} alt="" className="poster-img" />
             </div>
 
             <div className="movie-info">
               <div className="info-header">
-                <h1 className="movie-title">{data.title}</h1>
+                <h1 className="movie-title">{movie.title}</h1>
                 <button className="movie-save" onClick={() => navigate('/saved')}>
-                  <img src="./Icons/Zakladku mini.svg" alt="Закладки" className="w-6" />
+                  <img src="../../Icons/ZakladkuMini.svg" alt="Закладки" className="w-6" />
                 </button>
               </div>
 
               <div className="genre-tags">
-                {data.genres.map((g, i) => (
-                  <span key={i} className="genre-tag">{g}</span>
+                {movie.genres?.split(',').map((g, i) => (
+                  <span key={i} className="genre-tag">{g.trim()}</span>
                 ))}
               </div>
 
@@ -67,42 +55,42 @@ const navigate = useNavigate();
                 {[...Array(5)].map((_, i) => (
                   <img
                     key={i}
-                    src="./Icons/Star.svg"
+                    src="/Icons/Star.svg"
                     alt="Зірка"
                     className="w-5"
-                    style={{ opacity: i < Math.round(data.rating) ? 1 : 0.3 }}
+                    style={{ opacity: i < Math.round(movie.rating) ? 1 : 0.3 }}
                   />
                 ))}
-                <p className="review-count">{Math.floor(data.rating * 25)} відгуків</p>
+                <p className="review-count">{Math.floor(movie.rating * 25)} відгуків</p>
               </div>
 
               <div className="movie-frame" />
-
-              <p className="movie-description">{data.description}</p>
+              <p className="movie-description">{movie.description}</p>
 
               <button
                 className="select-session-btn"
-                onClick={() => navigate(`/sessions?movieId=${data.id}`)}>
+                onClick={() => navigate(`/sessions?movieId=${movie.id}`)}
+              >
                 Обрати сеанс
-                </button>
+              </button>
             </div>
 
             <aside className="movie-details">
               <div className="detail-block">
                 <p className="detail-label">Рік виходу:</p>
-                <p className="detail-value">{data.release_year}</p>
+                <p className="detail-value">{movie.release_year}</p>
               </div>
               <div className="detail-block">
                 <p className="detail-label">Режисер:</p>
-                <p className="detail-value">{data.director}</p>
+                <p className="detail-value">{movie.director}</p>
               </div>
               <div className="detail-block">
                 <p className="detail-label">Час:</p>
-                <p className="detail-value">{data.duration_minutes}</p>
+                <p className="detail-value">{movie.duration_minutes} хв</p>
               </div>
               <div className="detail-block">
                 <p className="detail-label">Актори:</p>
-                <p className="detail-value">{data.cast.join(", ")}</p>
+                <p className="detail-value">{movie.cast}</p>
               </div>
             </aside>
           </section>
@@ -113,7 +101,7 @@ const navigate = useNavigate();
               <iframe
                 width="100%"
                 height="315"
-                src={data.trailer_url.replace("watch?v=", "embed/")}
+                src={movie.trailer_url?.replace("watch?v=", "embed/")}
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -123,9 +111,9 @@ const navigate = useNavigate();
           </section>
         </main>
       </div>
-      <Footer></Footer>
+      <Footer />
     </div>
   );
-}
+};
 
 export default MovieDetails;

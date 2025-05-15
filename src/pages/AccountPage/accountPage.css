@@ -48,6 +48,20 @@
     flex-direction: column;
     gap: 35px;
 }
+.edit-movies-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.edit-movies-btn:hover {
+  background-color: #45a049;
+}
+
 .account-name{
     display: flex;
     gap: 50px;

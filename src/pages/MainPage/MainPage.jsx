@@ -1,15 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import Header from '../../components/header/header';
 import Footer from '../../components/footer/footer';
 import FilmCard from "../../components/FilmCard/FilmCard";
-import filmsData from "../../movies.json";
 
 import "../../App.css";
 import "./MainPage.css";
 
 const MainPage = () => {
-  const currentFilms = filmsData.slice(0, 5);
-  const premieres = filmsData.slice(5, 10);
+  const [films, setFilms] = useState([]);
+
+  useEffect(() => {
+    const fetchFilms = async () => {
+      try {
+        const response = await axios.get("https://localhost:9999/api/Movies");
+        setFilms(response.data);
+      } catch (error) {
+        console.error("Помилка завантаження фільмів:", error);
+      }
+    };
+
+    fetchFilms();
+  }, []);
+
+  const currentFilms = films.slice(0, 5);
+  const premieres = films.slice(5, 10);
 
   const scrollRow = (id, direction) => {
     const row = document.getElementById(id);
@@ -22,7 +37,7 @@ const MainPage = () => {
     }
   };
 
-  const renderSection = (title, films, rowId) => (
+  const renderSection = (title, filmsList, rowId) => (
     <section className="section">
       <h1>{title}</h1>
       <div className="films-row-section">
@@ -32,7 +47,7 @@ const MainPage = () => {
 
         <div className="films-row-wrapper">
           <div className="films-row" id={rowId}>
-            {films.map((film) => (
+            {filmsList.map((film) => (
               <FilmCard key={film.id} film={film} />
             ))}
           </div>
@@ -42,7 +57,7 @@ const MainPage = () => {
           <img src="./Icons/Right.svg" alt="→" />
         </button>
       </div>
-    </section>  
+    </section>
   );
 
   return (
