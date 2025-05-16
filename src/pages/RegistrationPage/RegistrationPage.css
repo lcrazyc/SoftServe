@@ -1,0 +1,88 @@
+.login-content .logo-log img{
+   width: 70%;
+    height: auto;
+}
+.login-content .logo-log{
+    height: 100px;
+    width: 100px;
+    display: flex;
+    background-color: var(--blue-color);
+    border-radius: 50%;
+        align-items: center;
+    justify-content: center;
+}
+.login-logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 14px;
+    align-items: center;
+}
+.log-item input{
+    color: var(--black-color);
+    margin: 0;
+    padding: 9px 20px;
+}
+.log-item input::placeholder{
+    color: var(--black-light-color);
+}
+.log-reg:hover{
+    color: var(--purple-color);
+}
+.login-content .log-item h2{
+    color: var(--grey-color);
+}
+.not-reg p{
+    font-family: "Montserrat", sans-serif;
+     font-weight: 600;
+    font-size: 14px;
+}
+.login-content button{
+     font-weight: 700;
+    font-size: 20px;
+    padding: 16px 20px;
+    cursor: pointer;
+    color: var(--white-color);
+}
+.log-item{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.login-content .account-item-box{
+    width: auto;
+}
+.login-content form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.not-reg{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.login-window{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 134px ;
+    background-color: var(--black-light-color);
+    box-shadow: inset 0px 4px 87px 0px rgba(3, 169, 244, 0.17);
+    border-radius: 13px;
+    gap: 38px;
+    width: 70%;
+}
+.login-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 70px;
+    align-items: center;
+        flex: 1; 
+}
+.login-container{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+}

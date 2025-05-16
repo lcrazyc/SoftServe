@@ -1,0 +1,86 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #131313;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.sessions-container {
+    min-height: 100vh;
+    background-color: #131313;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  
+  .page-title {
+    padding: 0px 70px;
+    padding-top: 58px;
+    margin: 0px;
+  }
+  
+  .filters {
+    display: flex;
+    gap: 0.75rem;
+    padding: 45px 70px;
+  }
+
+   
+  .filters1 {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    padding-left: 70px;
+    padding-top: 45px;
+    padding-bottom: 53px;
+  }
+  
+  .filters1 select {
+    background-color: var(--black-light-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 13px;
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='white' d='M2 5L0 0h4z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px;
+    padding-right: 35px;
+  }
+  
+  .filters1 select:hover {
+    background-color: var(--purple-color);
+    color: var(--white-color);
+  }
+  
+  .filters1 option {
+    background-color: #1f1f1f;
+    color: white;
+  }
+  
+  
+  
+  /* .movie-grid {
+    padding: 70px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1.5rem;
+  } */
+
+  .sessions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(293px, 1fr));
+    column-gap: 42.67px;
+    row-gap: 69px;
+    padding: 0 70px 137px 70px;
+  }

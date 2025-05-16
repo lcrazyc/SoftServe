@@ -1,0 +1,59 @@
+.add-movie-page {
+  padding: 40px;
+  background-color: var(--black-color);
+  color: var(--white-color);
+  min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+}
+
+.add-title {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: var(--blue-color);
+}
+
+.add-form {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--grey-light-color);
+}
+
+.form-group input {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--grey-color);
+  color: var(--white-color);
+  font-size: 16px;
+}
+
+.submit-btn {
+  margin-top: 10px;
+  padding: 12px;
+  background-color: var(--blue-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: var(--purple-color);
+}

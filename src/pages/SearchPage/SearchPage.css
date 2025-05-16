@@ -1,0 +1,76 @@
+.search-main {
+  padding: 30px 30px 30px 0;
+  background-color: var(--black-color);
+  min-height: 100vh;
+}
+.search-main h1{
+margin-left: 70px;
+margin-bottom: 30px;
+margin-top: 30px;
+}
+.search-title {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  margin-left: 70px;
+}
+
+.filter-bar select {
+  background-color: var(--black-light-color);
+  color: var(--white-color);
+  padding: 10px 20px;
+  border-radius: 13px;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.filter-bar select:hover {
+  background-color: var(--purple-color);
+  color: var(--white-color);
+}
+
+.film-cards-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-items: center;
+  padding: 20px 0;
+}
+
+.film-card {
+  width: 100%;
+  max-width: 200px;
+}
+
+@media (max-width: 1024px) {
+  .film-cards-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .film-cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .film-cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .film-card {
+    max-width: 90%;
+  }
+}

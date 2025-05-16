@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+
+.ticket-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  padding: 70px 80px;
+  gap: 150px;
+  flex: 1;
+}
+
+.left-panel {
+  flex: 1;
+  max-width: 700px;
+}
+
+.left-panel-name {
+  color: var(--blue-color);
+  font-weight: 800;
+  font-size: 36px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 120px;
+  margin: 80px 0;
+  color: var(--white-color);
+}
+
+.form-label {
+  color: var(--grey-light-color);
+  margin-bottom: 20px;
+}
+
+.form-column {
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+}
+
+.input-radio {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.price-box {
+  background: var(--blue-color);
+  color: var(--black-color);
+  width: 110px;
+  height: 32px;
+  padding: 7px 15px;
+  border-radius: 13px;
+  display: inline-block;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.placeholder {
+  color: var(--grey-color);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.form-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 75px;
+  margin-bottom: 30px;
+  color: var(--white-color);
+}
+
+.form-card-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-card-column label {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.form-card-column input {
+  width: 100%;
+  padding: 7px 20px;
+  border-radius: 13px;
+  height: 30px;
+  border: none;
+  text-align: center;
+  background-color: var(--grey-color);
+  color: var(--black-color);
+}
+
+.form-card-column input::placeholder {
+  color: var(--black-color);
+}
+
+.payment-methods {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--grey-light-color);
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  margin-bottom: 80px;
+  gap: 10px;
+}
+
+.pay-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 200px;
+  height: 40px;
+  padding: 8px 70px;
+  border: none;
+  border-radius: 13px;
+  background: var(--grey-light-color);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--black-color);
+}
+
+.main-btn {
+  padding: 16px 48px;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.right-panel {
+  background-color: var(--black-light-color);
+  padding: 50px;
+  border-radius: 13px;
+  display: grid;
+  grid-template-columns: repeat(7, 32px);
+  gap: 32px;
+  align-content: center;
+  justify-content: center;
+}
+
+.seat {
+  width: 27px;
+  height: 45px;
+  background-color: var(--blue-color);
+  border-radius: 13px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.seat.selected {
+  background-color: var(--purple-color);
+}
+
+.seat.disabled {
+  background-color: var(--grey-color);
+  cursor: not-allowed;
+  opacity: 0.5;
+}.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal h2 {
+  color: #28a745;
+  margin-bottom: 10px;
+}
+
+.modal p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.download-btn,
+.close-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn:hover,
+.close-btn:hover {
+  background-color: #0056b3;
+}
